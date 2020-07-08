@@ -5,19 +5,19 @@
 {% endblock %}
 
 {% block body %}
-    <ul>
-        <li>Flight Number: {{ flight.id }}</li>
-        <li>Origin: {{ flight.origin }}</li>
-        <li>Destination:  {{ flight.destination }}</li>
-        <li>Duration:  {{ flight.duration }}</li>
-        <li>Valid: {{ flight.is_valid_flight }}</li>
-        <li>
+    <ul class="list-group">
+        <li class="list-group-item">Flight Number: {{ flight.id }}</li>
+        <li class="list-group-item">Origin: {{ flight.origin }}</li>
+        <li class="list-group-item">Destination:  {{ flight.destination }}</li>
+        <li class="list-group-item">Duration:  {{ flight.duration }}</li>
+        <li class="list-group-item">Valid: {{ flight.is_valid_flight }}</li>
+        <li class="list-group-item">
             Passengers:
-            <ul>
+            <ul class="list-group">
                 {% for passenger in passengers %}
-                    <li>{{ passenger }}</li>
+                    <li class="list-group-item">{{ passenger }}</li>
                 {% empty %}
-                    <li>No passengers</li>
+                    <li class="list-group-item">No passengers</li>
                 {% endfor %}
             </ul>
         </li>
